@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <div className="container">
-            <table className="table">
+            <table className="table mt-5">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -28,13 +28,14 @@ export default function Home() {
                 {
                     users.map((user, index) => (
                         <tr>
-                            <th scope="row" key={index}>{index}</th>
+                            <th scope="row" key={index}>{index + 1}</th>
                             <td>{user.name}</td>
                             <td>{user.username}</td>
                             <td>{user.email}</td>
                             <td>
-                                <button></button>
-                                <button></button>
+                                <button className="btn btn-link mx-2"><i className="bi bi-box-arrow-in-up"></i></button>
+                                <button className="btn btn-link text-info mx-2"><i className="bi bi-pencil-square"></i></button>
+                                <button className="btn btn-link text-danger mx-2"><i className="bi bi-trash"></i></button>
                             </td>
                         </tr>
                     ))
